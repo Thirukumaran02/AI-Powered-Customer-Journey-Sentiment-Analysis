@@ -32,12 +32,95 @@ Tech Stack
 
 6.Version Control: GitHub
 
-Expected Outcomes
+AI-Powered Customer Journey & Sentiment Analysis Dashboard
 
-1.AI model for customer sentiment classification.
+with Jira, Python, Snowflake, Google Colab, Power BI, and GitHub
 
-2.Customer journey mapping linked with sentiment insights.
+Step 1 — Planning with Jira
 
-3.Business-ready action plan to enhance customer experience.
+Created a project board in Jira.
 
-4.Dashboard for real-time decision-making.
+Defined epics: Data Preparation, Modeling, Dashboard, Deployment.
+
+Broke down into stories/tasks: dataset prep, Snowflake schema, NLP modeling, KPI design, dashboard build, GitHub push.
+
+Used Jira to track progress like a real IT project.
+
+Step 2 — Dataset Preparation (Python)
+
+Collected Amazon reviews dataset (CSV).
+
+Cleaned text: removed duplicates, nulls, emojis, special characters.
+
+Standardized formats (date, product ID, language).
+
+Finalized dataset ready for database ingestion.
+
+Step 3 — Data Loading into Snowflake
+
+Designed schema for amazon_reviews.
+
+Created tables in Snowflake.
+
+Loaded cleaned CSV data using COPY INTO.
+
+Ensured staging area and data warehouse were properly structured.
+
+Step 4 — Analysis with Google Colab (Python NLP + SQL)
+
+Connected Google Colab to Snowflake.
+
+Performed sentiment analysis (VADER / ML models).
+
+Classified reviews into customer journey stages (Purchase, Delivery, Support).
+
+Calculated business KPIs (NPS, CSAT, churn risk).
+
+Used Colab for experimentation and visualization.
+
+Step 5 — Storing Analyzed Data in Snowflake
+
+Enriched reviews with new columns: sentiment, journey_stage, sentiment_score, etc.
+
+Saved the processed results back into Snowflake tables.
+
+Created views for KPIs, sentiment breakdown, and stage analysis.
+
+Step 6 — Power BI Dashboard
+6.1 Data Modeling
+
+Connected Power BI directly to Snowflake.
+
+Created relationships between fact tables (reviews) and dimension tables (products, time, language).
+
+6.2 Transformations
+
+Applied Power Query transformations: filtering, KPI aggregations, DAX calculations.
+
+Built visuals:
+
+KPI cards (NPS, CSAT, % Positive Sentiment)
+
+Sentiment trends over time
+
+Funnel charts (Awareness → Purchase → Delivery → Support)
+
+Heatmap of sentiment by product & region
+
+Word clouds for top complaints
+
+Step 7 — Source Code & Versioning in GitHub
+
+Uploaded Python scripts, SQL queries, Power BI file, and documentation into a public/private GitHub repository.
+
+Structured repo with clear folders:
+
+src/ for scripts
+
+sql/ for queries
+
+dashboard/ for Power BI reports
+
+docs/ for write-ups and architecture diagrams
+
+Ensured reproducibility and collaboration readiness.
