@@ -1,9 +1,12 @@
-🚀 AI-Powered Customer Journey & Sentiment Analysis:
+                                                               🚀 AI-Powered Customer Journey & Sentiment Analysis:
 
 📌 Overview:
+
+
 In today’s competitive market, understanding customer behavior is critical. This project collects feedback from multiple sources—such as product reviews, surveys, social media mentions, and support tickets—and analyzes it using AI-powered sentiment analysis. By mapping sentiments to different stages of the customer journey (Onboarding, Purchase, Delivery, After-sales), the project provides organizations with a clear understanding of customer experiences, highlights pain points, and uncovers opportunities for improvement.
 
 🎯 Goal:
+
 The primary goal of this project is to empower businesses with actionable insights by:
 
 🔍 Identifying Customer Pain Points: Detect issues and bottlenecks at each stage of the journey.
