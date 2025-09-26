@@ -1,4 +1,4 @@
-                                    🚀 AI-Powered Customer Journey & Sentiment Analysis:
+                                🚀 AI-Powered Customer Journey & Sentiment Analysis
 
 📌 Overview:
 
