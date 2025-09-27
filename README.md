@@ -71,6 +71,22 @@ Journey stage distribution and pain point heatmaps
 2. Customer Journey Stage Mapping: Python function mapping reviews to stages
 
 3. KPIs: NPS, CSAT, Churn Risk calculations
+   
+📋 DAX Formulas Used
+
+% Neutral Reviews: DIVIDE(COUNTROWS(FILTER(Fact_Reviews, FACT_REVIEWS[SENTIMENT_LABEL] = "Neutral")), COUNTROWS(Fact_Reviews), 0)*100
+
+% Positive Reviews: DIVIDE(COUNTROWS(FILTER(Fact_Reviews, FACT_REVIEWS[SENTIMENT_LABEL] = "Positive")), COUNTROWS(Fact_Reviews), 0)
+
+Negative Reviews: [% Negative Reviews]+0
+
+Negative Avg Resolution Time: CALCULATE(AVERAGE(FACT_REVIEWS[SUPPORT_RESOLUTION_TIME]), FACT_REVIEWS[SENTIMENT_LABEL] = "Negative")
+
+Negative Review Proportion by Country: DIVIDE(CALCULATE(COUNTROWS(FACT_REVIEWS), FACT_REVIEWS[SENTIMENT_LABEL] = "Negative"), CALCULATE(COUNTROWS(FACT_REVIEWS)), 0)
+
+CSAT: DIVIDE(COUNTROWS(FILTER(FACT_REVIEWS, FACT_REVIEWS[REVIEW_RATING] >= 4)), COUNTROWS(FILTER(FACT_REVIEWS, NOT(ISBLANK(FACT_REVIEWS[REVIEW_RATING])))), 0) * 100
+
+NPS Score: PctPromoters - PctDetractors (calculated from promoters % minus detractors %)
 
 👨‍💻 Author
 
